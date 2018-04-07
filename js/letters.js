@@ -18,18 +18,13 @@ var counter = {
 function countLetters(counter, sample_text) {
   // FIX ME
   sample_text = sample_text.toLowerCase();
-  console.log(sample_text);
   function recursify(num) {
-    console.log('recursify'); 
-    console.log(num);
+    let position = sample_text[num];
     if (num === sample_text.length) {
-      console.log('break');
       return counter;
     }
-    console.log(sample_text);
-    if (counter.hasOwnProperty(sample_text[num])) {
-      counter[sample_text[num]]++;
-      console.log('helloworld');
+    if (counter.hasOwnProperty(position)) {
+      counter[position]++;
     }
     recursify(++num);
   }
